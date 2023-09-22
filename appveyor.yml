@@ -12,6 +12,7 @@ environment:
 
 init:
   - ps: if ($env:appveyor_repo_branch -ne 'master') { $env:non_master = 'true' }
+  - ps: $env:Path = "D:\User\lprabhakaran\AppData\Local\Programs\Git\cmd;$env:Path"
 
 install:
   - SET "PATH=C:\Ruby%ruby_folder_version%\bin;%PATH%"
